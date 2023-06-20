@@ -1,4 +1,6 @@
-## Key/Value Storage (simple)
+# Key/Value Storage (simple)
+
+## Техническое задание
 
 Нужно написать простую реализацию для хранения данных по ключу.
 
@@ -16,4 +18,14 @@ type Storager interface {
 Написать тесты.
 
 Реализация должна поддерживать работу в многопоточном режиме.
+
+## Отчёт о проведённом тестировании
+
+```
+$ go test -v github.com/svkorch/kvss/internal/kvss
+=== RUN   TestStorage
+--- PASS: TestStorage (0.00s)
+PASS
+ok      github.com/svkorch/kvss/internal/kvss   0.001s
+```
 
