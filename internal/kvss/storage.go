@@ -8,15 +8,18 @@ type Storager interface {
 }
 
 type KVStorage struct {
-	Storager
 	mu sync.RWMutex
 	mp map[string]string
 }
 
 func New() *KVStorage {
-	return &KVStorage{
+	x := &KVStorage{
 		mp: make(map[string]string),
 	}
+
+	var _ Storager = x
+
+	return x
 }
 
 func (s *KVStorage) Add(k, v string) {
